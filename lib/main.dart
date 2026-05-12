@@ -333,11 +333,11 @@ class _ChatScreenState extends State<ChatScreen> {
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
                 decoration: BoxDecoration(
                   color: Theme.of(context).cardColor,
-                  boxShadow: [
+                  boxShadow: const [
                     BoxShadow(
                       color: Colors.black12,
                       blurRadius: 4,
-                      offset: const Offset(0, -2),
+                      offset: Offset(0, -2),
                     ),
                   ],
                 ),
@@ -424,8 +424,8 @@ class _ChatScreenState extends State<ChatScreen> {
         children: [
           if (!message.isUser)
             const CircleAvatar(
-              child: Icon(Icons.smart_toy),
               radius: 16,
+              child: Icon(Icons.smart_toy),
             ),
           if (!message.isUser) const SizedBox(width: 8),
           Flexible(
@@ -471,11 +471,11 @@ class _ChatScreenState extends State<ChatScreen> {
                           ? Theme.of(context).primaryColor
                           : Theme.of(context).cardColor,
                       borderRadius: BorderRadius.circular(16),
-                      boxShadow: [
+                      boxShadow: const [
                         BoxShadow(
                           color: Colors.black12,
                           blurRadius: 2,
-                          offset: const Offset(1, 1),
+                          offset: Offset(1, 1),
                         ),
                       ],
                     ),
@@ -558,8 +558,8 @@ class _ChatScreenState extends State<ChatScreen> {
           if (message.isUser) const SizedBox(width: 8),
           if (message.isUser)
             const CircleAvatar(
-              child: Icon(Icons.person),
               radius: 16,
+              child: Icon(Icons.person),
             ),
         ],
       ),
